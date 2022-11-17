@@ -10,7 +10,7 @@
 
 출처: https://datanetworkanalysis.github.io/2020/02/05/understanding_outlier1
 
-이상 탐지를 위해서는 다양한 접근이 가능하다. 그 기법들은 살펴보면 크게 분류 기반, 밀도 기반, Nearest Neighnor(NN) 기반, 군집화 기반, 통계적 기법 등으로 나뉜다.
+이상 탐지를 위해서는 다양한 접근이 가능하다. 그 기법들은 살펴보면 크게 분류 기반, 밀도 기반, Nearest Neighnor(NN) 기반, 군집화 기반, 통계적 기법 등으로 나뉠 수 있다..
 
 ## 2. 분류 기반 이상 탐지
 분류기를 주어진 특성 공간(Feature Space)에서 학습시킬 수 있는 가정을 전제로 한다. 라벨의 개수에 따라 one-class 또는 multi-class로 데이터를 학습시키고, class에 해당하지 않는 개체를 이상치로 처리한다. 대표적으로 오토인코더(Autoencoder), One-Class SVM 알고리즘들이 있다.
