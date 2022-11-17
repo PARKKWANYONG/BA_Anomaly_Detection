@@ -45,9 +45,9 @@ Class Imbalance가 매우 심한 경우 정상 sample만 이용해서 모델을 
 출처: https://velog.io/@euisuk-chung/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%EC%B0%A8%EC%9B%90%EC%B6%95%EC%86%8C-%EC%9D%B4%EC%83%81%EC%B9%98-%ED%83%90%EC%A7%80-%EA%B8%B0%EB%B2%95-%EB%B0%80%EB%8F%84%EA%B8%B0%EB%B0%98-%EC%9D%B4%EC%83%81%EC%B9%98-%ED%83%90%EC%A7%80
 
 장점
-1. 데이터의 범위에 민감하지 않다. (∵ 공분산 행렬은 측정 단위가 영향을 끼치지 않음)
+* 데이터의 범위에 민감하지 않다. (∵ 공분산 행렬은 측정 단위가 영향을 끼치지 않음)
 
-분포를 추정한 학습데이터로부터 처음부터 rejection에 대한 1종 오류를 정의할 수 있다. (ex. 신뢰수준 95%)
+* 분포를 추정한 학습데이터로부터 처음부터 rejection에 대한 1종 오류를 정의할 수 있다. (ex. 신뢰수준 95%)
 
 
 * Formulation (Parameter estimation: μ, σ2)
@@ -57,9 +57,9 @@ Class Imbalance가 매우 심한 경우 정상 sample만 이용해서 모델을 
 ### 3.2. Mixture of Gaussian Density Estimation
 
 가정
-- 관측치들은 여러 개의 Gaussian들의 선형결합으로부터 생성되었다.
+* 관측치들은 여러 개의 Gaussian들의 선형결합으로부터 생성되었다.
 
-가우시안 결합 모델과 각각의 가우시안 모델(수식)
+* 가우시안 결합 모델과 각각의 가우시안 모델(수식)
 
 ![image](https://user-images.githubusercontent.com/71392868/202360579-a572c5ea-51d3-40ab-b3ee-3db4900ad240.png)
 
