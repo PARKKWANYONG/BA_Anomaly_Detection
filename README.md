@@ -10,7 +10,7 @@
 
 출처: https://datanetworkanalysis.github.io/2020/02/05/understanding_outlier1
 
-이상 탐지를 위해서는 다양한 접근이 가능하다. 그 기법들은 살펴보면 크게 분류 기반, 밀도 기반, Nearest Neighnor(NN) 기반, 군집화 기반, 통계적 기법 등으로 나뉠 수 있다..
+이상 탐지를 위해서는 다양한 접근이 가능하다. 그 기법들은 살펴보면 크게 분류 기반, 밀도 기반, Nearest Neighnor(NN) 기반, 군집화 기반, 통계적 기법 등으로 나뉠 수 있다.
 
 ## 2. 분류 기반 이상 탐지
 분류기를 주어진 특성 공간(Feature Space)에서 학습시킬 수 있는 가정을 전제로 한다. 라벨의 개수에 따라 one-class 또는 multi-class로 데이터를 학습시키고, class에 해당하지 않는 개체를 이상치로 처리한다. 대표적으로 오토인코더(Autoencoder), One-Class SVM 알고리즘들이 있다.
@@ -140,14 +140,27 @@ k번째로 가까운 개체와의 거리를 이용하는 경우, 이상 점수�
 
 
 통계적 접근의 강점 및 약점
-- 장점 
+장점 
 * 변동없는수학기초 
 * 해석 용이
 * 분포가 알려진 경우 높은 성능
-- 단점  
+단점  
 * 분포가 알려지지 않은 경우 낮은 성능 
 * 고차원 데이터의 경우 실제분포를 예측하기 어려움
 * 이상치는 분포의 매개변수를 왜곡시킬수 있음 
+
+
+# Reference
+
+* Reference1 : https://velog.io/@vvakki_/Isolation-Forest-%EB%AF%B8%EC%99%84%EC%84%B1
+* Reference2 : http://docs.iris.tools/manual/IRIS-Usecase/AnomalyDetection/AnomalyDetection_202009_v01.html
+* Reference3 : https://nanunzoey.tistory.com/entry/%EC%9D%B4%EC%83%81-%ED%83%90%EC%A7%80Anomaly-Detection-%EA%B8%B0%EB%B2%95%EC%9D%98-%EC%A2%85%EB%A5%98
+* Reference4 : https://www.cognex.com/ko-kr/blogs/deep-learning/research/anomaly-detection-overview-1-introduction-anomaly-detection
+* Reference5 : https://datanetworkanalysis.github.io/2020/02/05/understanding_outlier1
+* Reference6 : https://www.mdpi.com/1424-8220/21/19/6679
+* Reference7 : https://datanetworkanalysis.github.io/2020/02/05/understanding_outlier1
+* Reference8 : Desforges, M. J., Jacob, P. J., &Cooper, J. E. (1998). Applications of probability density estimation to the detection of abnormal conditions in engineering. Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science, 212(8), 687-703.
+* Reference9 : Eskin, E.Anomaly detection over noisy data using learned probability distributions. Paper presented at the In Proceedings of the International Conference on Machine Learning
 
 
 
