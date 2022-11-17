@@ -3,7 +3,7 @@
 이상탐지(Anomaly Detection)이란, 데이터에서 다른 패턴을 보이는 개체 또는 자료를 찾는 것을 의미한다. 즉 학습데이터를 기반으로 기존 데이터들과는 다른 특성을 갖는 데이터를 찾는 방법이다. 사이버 보안, 의학 분야, 금융 분야, 행동 패턴 분야 등 다양한 분야에 적용될 수 있다. 대표적인 예로 신용카드 사기, 사이버 침입, 테러 행위 같은 악의적 행동이나 시스템 고장, 비정상적인 상황등에 활용된다.
 '이상' 이라는 표현은 적용되는 도메인 컨텍스트나 데이터의 종류에 따라 Anomaly, outlier, discordant observation, exception, aberration 등 다양하게 불린다.
 
-### 1.2 Anomaly vs Classification
+### 1.2 Anomaly Detection vs Classification
 이상 탐지는 종종 분류(Classification)문제와 혼동되는데, 둘은 엄연한 차이가 있다. 분류는 두 범주를 구분할 수 있는 경계면을 찾는 것인 반면, 이상 탐지는 다수의 범주를 고려해 이상치가 아닌 데이터들의 sector를 구분 짓는 것이라고 할 수 있다. 
 
 ![image](https://user-images.githubusercontent.com/71392868/202358197-6b8e5f7a-7858-45ed-b564-8a843d622874.png)
@@ -15,7 +15,7 @@
 ## 2. 분류 기반 이상 탐지
 분류기를 주어진 특성 공간(Feature Space)에서 학습시킬 수 있는 가정을 전제로 한다. 라벨의 개수에 따라 one-class 또는 multi-class로 데이터를 학습시키고, class에 해당하지 않는 개체를 이상치로 처리한다. 대표적으로 오토인코더(Autoencoder), One-Class SVM 알고리즘들이 있다.
 ### 2.1 Autoencoder
-오토인코더 신경망의 구조는 아래 그림과 같다. 입력층(Input layer)과 출력층(Output layer)의 노드 수가 같고, 하나 이상의 은닉층(Hidden layer)으로 구성된 인코덜르 통해 입력 데이터를 압축하고, 디코더를 사용해 개체를 복원한다. 이렇게 복원했을 때 발생하는 복원오차가 크면 클수록 이상 개체라고 판단하는 방식이다. One-class, multi-class 문제의 구분 없이 모두 적용할 수 있다.
+오토인코더 신경망의 구조는 아래 그림과 같다. 입력층(Input layer)과 출력층(Output layer)의 노드 수가 같고, 하나 이상의 은닉층(Hidden layer)으로 구성된 인코더를 통해 입력 데이터를 압축하고, 디코더를 사용해 개체를 복원한다. 이렇게 복원했을 때 발생하는 복원오차가 크면 클수록 이상 개체라고 판단하는 방식이다. One-class, multi-class 문제의 구분 없이 모두 적용할 수 있다.
 ![image](https://user-images.githubusercontent.com/71392868/202358740-ab232695-c7f3-4df4-a92b-24d06144c4ce.png)
 
 출처: https://www.mdpi.com/1424-8220/21/19/6679
