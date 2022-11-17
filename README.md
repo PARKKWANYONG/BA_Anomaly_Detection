@@ -21,14 +21,14 @@
 출처: https://www.mdpi.com/1424-8220/21/19/6679
 
 ### 2.2. SVM
-Class Imbalance가 매우 심한 경우 정상 sample만 이용해서 모델을 학습하기도 하는데, 이 방식을 One-Class Classification(혹은 Semi-supervised Learning)이라 한다. 이 방법론의 핵심 아이디어는 정상 sample들을 둘러싸는 discriminative boundary를 설정하고, 이 boundary를 최대한 좁혀 boundary 밖에 있는 sample들을 모두 비정상으로 간주하는 것입니다. One-Class SVM 이 One-Class Classification을 사용하는 대표적인 방법론으로 잘 알려져 있으며, 이 아이디어에서 확장해 Deep Learning을 기반으로 One-Class Classification 방법론을 사용하는 Deep SVDD 논문이 잘 알려져 있다. Deep SVDD의 구조는 아래와 같다. 
+Class Imbalance가 매우 심한 경우 정상 sample만 이용해서 모델을 학습하기도 하는데, 이 방식을 One-Class Classification(혹은 Semi-supervised Learning)이라 한다. 이 방법론의 핵심 아이디어는 정상 sample들을 둘러싸는 discriminative boundary를 설정하고, 이 boundary를 최대한 좁혀 boundary 밖에 있는 sample들을 모두 비정상으로 간주하는 것이다. One-Class SVM 이 One-Class Classification을 사용하는 대표적인 방법론으로 잘 알려져 있으며, 이 아이디어에서 확장해 Deep Learning을 기반으로 One-Class Classification 방법론을 사용하는 Deep SVDD 논문이 잘 알려져 있다. Deep SVDD의 구조는 아래와 같다. 
 
 ![image](https://user-images.githubusercontent.com/71392868/202359716-70d60582-ef24-482c-82f4-d343483348d4.png)
 
 출처: https://www.cognex.com/ko-kr/blogs/deep-learning/research/anomaly-detection-overview-1-introduction-anomaly-detection
 
 ## 3. 밀도 기반 이상 탐지
-정상 데이터의 데이터 분포를 사용하여 정상 상태의 분포를 추정한 뒤, 새로운 객체에 대하여 확률이 높으면 정상, 확률이 낮으면 비정상을 반환하는 방법론이다. 일반적으로 데이터의 분포를 설명하는 모수 모형(Parametric Model을 가정하며, 정규 분포로 추정을 할 때 몇 개의 가우시안 모델이 사용되었는가에 따라 다음과 같이 분류될 수 있다.
+정상 데이터의 데이터 분포를 사용하여 정상 상태의 분포를 추정한 뒤, 새로운 객체에 대하여 확률이 높으면 정상, 확률이 낮으면 비정상을 반환하는 방법론이다. 일반적으로 데이터의 분포를 설명하는 모수 모형(Parametric Model을 가정하며, 정규 분포로 추정을 할 때 몇 개의 가우시안 모델이 사용되었는가에 아래와 같이 Gaussian Density와 Mixture Gaussian Density로 분류될 수 있다.
 
 
 ![image](https://user-images.githubusercontent.com/71392868/202360037-3e6f4484-0904-40dc-9a0e-281320dc0cfa.png)
@@ -50,7 +50,7 @@ Class Imbalance가 매우 심한 경우 정상 sample만 이용해서 모델을 
 분포를 추정한 학습데이터로부터 처음부터 rejection에 대한 1종 오류를 정의할 수 있다. (ex. 신뢰수준 95%)
 
 
-알맹이: Formulation (Parameter estimation: μ, σ2)
+* Formulation (Parameter estimation: μ, σ2)
 
 ![image](https://user-images.githubusercontent.com/71392868/202360503-f013d303-3c05-40dd-bdfb-81dfa279372a.png)
 
