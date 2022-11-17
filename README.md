@@ -7,4 +7,5 @@
 이상 탐지는 종종 분류(Classification)문제와 혼동되는데, 둘은 엄연한 차이가 있다. 분류는 두 범주를 구분할 수 있는 경계면을 찾는 것인 반면, 이상 탐지는 다수의 범주를 고려해 이상치가 아닌 데이터들의 sector를 구분 짓는 것이라고 할 수 있다. 
 
 ![image](https://user-images.githubusercontent.com/71392868/202358197-6b8e5f7a-7858-45ed-b564-8a843d622874.png)
+
 출처: https://datanetworkanalysis.github.io/2020/02/05/understanding_outlier1
